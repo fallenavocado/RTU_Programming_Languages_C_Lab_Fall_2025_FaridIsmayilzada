@@ -11,9 +11,15 @@
       - Otherwise, call sum_to_n and print the result
 */
 
+
 int sum_to_n(int n) {
-    // TODO: implement sum with a for loop
-    return 0; // placeholder
+  int sum = 0;
+    for (int i = 1; i <= n; i++) {
+        sum += i;
+        printf("%d\n", i);
+    }
+    
+    return sum; // placeholder
 }
 
 int main(void) {
@@ -21,7 +27,13 @@ int main(void) {
 
     printf("Enter a positive integer n: ");
     scanf("%d", &n);
-
+if (n<1) { 
+    printf("Your input doesn't seem to be a positive integer");
+}
+    else {
+    printf("The sum of integers from 1 to %d is %d\n", n, sum_to_n(n));
+    return 0;
+}
     // TODO: validate input, call function, and print result
 
     return 0;
