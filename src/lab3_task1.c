@@ -66,6 +66,8 @@ int array_sum(int arr[], int size) {
     }
     return s;
 
+}
+
 float array_avg(int arr[], int size) {
     return (float)array_sum(arr, size) / size; 
-}  
+}
