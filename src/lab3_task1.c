@@ -1,6 +1,6 @@
 /*
  * Lab 3, Task 1
- * Student Name, Student ID
+ * Farid Ismayilzada (241ADB0750)
  *
  * Implement array algorithms:
  *   - find minimum value
@@ -22,6 +22,7 @@
  */
 
 #include <stdio.h>
+#include <limits.h>
 
 // Function prototypes
 int array_min(int arr[], int size);
@@ -43,21 +44,28 @@ int main(void) {
 
 // Implement functions below
 int array_min(int arr[], int size) {
-    // TODO: return smallest element
-    return 0; // placeholder
+    int my_min = INT_MAX;
+    for (int i = 0; i < size; i++) {
+        if (arr[i] < my_min) my_min = arr[i];
+    }
+    return my_min;
 }
 
 int array_max(int arr[], int size) {
-    // TODO: return largest element
-    return 0; // placeholder
+    int my_max = INT_MIN;
+    for (int i = 0; i < size; i++) {
+        if (arr[i] > my_max) my_max = arr[i];
+    }
+    return my_max;
 }
 
 int array_sum(int arr[], int size) {
-    // TODO: return sum of elements
-    return 0; // placeholder
-}
+    int s = 0;
+    for (int i = 0; i < size; i++) {
+        s += arr[i];
+    }
+    return s;
 
 float array_avg(int arr[], int size) {
-    // TODO: return average as float
-    return 0.0f; // placeholder
-}
+    return (float)array_sum(arr, size) / size; 
+}  
