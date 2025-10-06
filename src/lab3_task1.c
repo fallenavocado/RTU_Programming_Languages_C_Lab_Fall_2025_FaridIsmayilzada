@@ -23,6 +23,7 @@
 
 #include <stdio.h>
 #include <limits.h>
+#include <limits.h>
 
 // Function prototypes
 int array_min(int arr[], int size);
@@ -44,11 +45,8 @@ int main(void) {
 
 // Implement functions below
 int array_min(int arr[], int size) {
-    int my_min = INT_MAX;
-    for (int i = 0; i < size; i++) {
-        if (arr[i] < my_min) my_min = arr[i];
-    }
-    return my_min;
+    // TODO: return smallest element
+    return 0; // placeholder
 }
 
 int array_max(int arr[], int size) {
